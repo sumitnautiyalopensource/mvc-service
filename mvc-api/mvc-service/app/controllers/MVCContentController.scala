@@ -10,6 +10,7 @@ import play.api.mvc.ControllerComponents
 import scala.concurrent.{ExecutionContext, Future}
 
 class MVCContentController @Inject()(cc: ControllerComponents) (implicit exec: ExecutionContext) extends SearchBaseController(cc) {
+  //Configured Sonar
   val readJson: ReadJson = new ReadJson()
   @transient val mapper = new ObjectMapper();
   mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
