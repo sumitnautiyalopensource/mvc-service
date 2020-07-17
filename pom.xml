@@ -16,6 +16,13 @@
 		<scala.version>2.11.12</scala.version>
 		<scalatest.version>3.0.8</scalatest.version>
 		<fasterxml.jackson.version>2.9.8</fasterxml.jackson.version>
+
+
+		<sonar.projectKey>sumitnautiyalopensource_mvc-service</sonar.projectKey>
+		<sonar.organization>sumitnautiyalopensource</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
+
 	</properties>
 	<modules>
 		<module>platform-core</module>
