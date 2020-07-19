@@ -28,9 +28,9 @@ import static org.junit.Assert.assertTrue;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.when;
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest(HttpClientHelper.class)
-@PowerMockIgnore({"javax.management.*", "sun.security.ssl.*", "javax.net.ssl.*", "javax.crypto.*"})
+//@RunWith(PowerMockRunner.class)
+//@PrepareForTest(HttpClientHelper.class)
+//@PowerMockIgnore({"javax.management.*", "sun.security.ssl.*", "javax.net.ssl.*", "javax.crypto.*"})
 public class HttpUtilTest {
 
 	/*private static HttpResponse<String> httpResponse = null;
