@@ -7,7 +7,7 @@ import scala.collection.immutable.Stream.Empty
 import scala.concurrent.{ExecutionContext, Future}
 
 class RedisCacheTest extends AsyncFlatSpec with Matchers with BeforeAndAfterAll {
-
+/*
 	var cons_message: String = ""
 
 	override def afterAll() {
@@ -171,6 +171,6 @@ class RedisCacheTest extends AsyncFlatSpec with Matchers with BeforeAndAfterAll 
 			case e: Exception => None
 		}
 	}
-
+*/
 
 }
