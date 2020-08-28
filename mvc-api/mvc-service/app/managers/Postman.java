@@ -15,10 +15,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Postman {
     private static HttpClient client;
-
+   static Logger logger = LoggerFactory.getLogger(Postman.class);
     public static HttpClient getHttpClient() {
         if (client == null) {
             RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(300 * 1000).setSocketTimeout(300 * 1000).build();
@@ -39,6 +41,7 @@ public class Postman {
 
             HttpResponse response = httpClient.execute(httpPost);
             System.out.println("response::"+response);
+            logger.info("Response to url " + url + " is " + response);
             if (response.getStatusLine().getStatusCode() != 200) {
                 throw new RuntimeException("Failed : HTTP error code : " + response.getStatusLine().getStatusCode());
             }
@@ -57,6 +60,7 @@ public class Postman {
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
         int statuscode = response.getStatusLine().getStatusCode();
+        logger.info("Status call to url " + url + " is " + statuscode);
         Map<String,Object> resp = new HashMap<String,Object>();
         resp.put("statuscode",statuscode);
         String line;
